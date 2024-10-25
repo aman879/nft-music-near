@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import Home from '@/components/Home/Home';
-import jws from "../contract/key.json";
 import { PinataSDK } from 'pinata-web3';
 import Mint from '@/components/Mint/Mint';
 import { Navbar } from '@/components/Navbar/Navbar';
@@ -13,7 +12,7 @@ import Explore from '@/components/Explore/Explore';
 const CONTARCT = NftNearContract;
 
 const pinata = new PinataSDK({
-    pinataJwt: jws.jws,
+    pinataJwt: process.env.NEXT_PUBLIC_PINATA_KEY,
     pinataGateway: "beige-sophisticated-baboon-74.mypinata.cloud",
 });
 
