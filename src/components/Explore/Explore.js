@@ -3,7 +3,6 @@ import CardList from "../CardList/CardList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Explore = ({ nfts, isConnected, isLoading, canPlay, handlePay, url, handleCloseVideo }) => {
-  console.log(canPlay, url);
   return (
     <div className="d-flex flex-row justify-content-center align-items-center vh-100">
       {canPlay && url && (

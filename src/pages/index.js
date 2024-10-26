@@ -77,7 +77,7 @@ const IndexPage = () => {
   const mintNFTs = async (uri, price) => {
     if(!signedAccountId) return;
     try {
-        const depositAmount = price * 1000000000000000000000000;
+        const depositAmount = price * 1e24;
         console.log(depositAmount);
         const tx = await wallet.callMethod({
             contractId: CONTARCT,
@@ -147,6 +147,7 @@ const IndexPage = () => {
       setUrl(uri);
       setShouldFetchNfts(true);
     } catch (e) {
+      console.log(e)
       toast.error('Error playing NFT:', {
         position: "top-center"
       });

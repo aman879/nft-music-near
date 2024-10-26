@@ -141,6 +141,7 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
                     <button 
                       className="mt-2 mb-2 btn btn-outline-danger"
                       onClick={() => handlePay(idNum, video, price)}
+                      target="_blank"
                     >
                       <span className="text-pink-300">Play for</span> <span className="text-sky-400">{price}</span>
                     </button>
