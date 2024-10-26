@@ -23,6 +23,7 @@ const CardList = ({ userNFTs, handlePay, isPlaying}) => {
 
     return (
         <div>
+            
             {userNFTs.length === 0 ? (
                 <p>No NFTs found.</p>
             ) : (

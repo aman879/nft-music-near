@@ -10,7 +10,7 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
           .card-div {
             flex: 1 1 250px;
             max-width: 250px;
-            height: 395px;
+            height: 450px;
             transition: all 0.2s;
             position: relative;
             cursor: pointer;
@@ -107,7 +107,7 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
               src={video}
               controls={false}
               autoPlay={false}
-              style={{ height: "150px", width: "200px" }}
+              style={{ height: "120px", width: "200px" }}
             >
             </video>
             <div className="d-flex justify-content-between align-items-center text-white">
@@ -130,9 +130,8 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
               <div className="text-center mt-auto">
                 {!isPlaying && (              
                     <button 
-                      className="mt-2 mb-2 btn btn-outline-danger"
+                      className="btn btn-outline-danger"
                       onClick={() => handlePay(idNum, video, price)}
-                      target="_blank"
                     >
                       <span className="text-pink-300">Play for</span> <span className="text-sky-400">{price}</span>
                     </button>
