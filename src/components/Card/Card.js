@@ -7,12 +7,6 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
     <>
       <style>
         {`
-          .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-          }
-
           .card-div {
             flex: 1 1 250px;
             max-width: 250px;
@@ -105,9 +99,6 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
         `}
       </style>
 
-      <div
-        className="card-container"
-      >
         <div className="card-div">
           <div className="card-inner">
             <video
@@ -150,7 +141,6 @@ const Card = ({ id, owner, name, video, description, seen, price, handlePay, isP
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
