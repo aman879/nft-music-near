@@ -17,9 +17,9 @@ const Home = ({ onRouteChange }) => {
             margin: '0 auto',
           }}
         >
-          "Music NFTs are unique digital assets that represent ownership of a specific file.
+          Music NFTs are unique digital assets that represent ownership of a specific file.
           They ensure authenticity and provenance by recording ownership on the blockchain.
-          Each NFT has a unique identifier, ensuring its uniqueness and non-interchangeability."
+          Each NFT has a unique identifier, ensuring its uniqueness and non-interchangeability.
         </p>
         <button 
           onClick={() => onRouteChange("mint")}
