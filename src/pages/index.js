@@ -8,12 +8,12 @@ import { NftNearContract } from '../config';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Explore from '@/components/Explore/Explore';
+import jws from "../contract/pinata.json";
 
 const CONTARCT = NftNearContract;
-console.log(process.env.NEXT_PUBLIC_PINATA_KEY)
 
 const pinata = new PinataSDK({
-    pinataJwt: process.env.NEXT_PUBLIC_PINATA_KEY,
+    pinataJwt: jws.jws,
     pinataGateway: "beige-sophisticated-baboon-74.mypinata.cloud",
 });
 
