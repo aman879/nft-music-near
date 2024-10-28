@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Explore from '@/components/Explore/Explore';
 
 const CONTARCT = NftNearContract;
+console.log(process.env.NEXT_PUBLIC_PINATA_KEY)
 
 const pinata = new PinataSDK({
     pinataJwt: process.env.NEXT_PUBLIC_PINATA_KEY,
@@ -77,14 +78,14 @@ const IndexPage = () => {
   const mintNFTs = async (uri, price) => {
     if(!signedAccountId) return;
     try {
-        const depositAmount = price * 1e24;
-        console.log(depositAmount);
+        const scaledPrice = Math.round(price * 1e24);
+        const depositAmount = BigInt(scaledPrice).toString();
         const tx = await wallet.callMethod({
             contractId: CONTARCT,
             method: 'mint',
             args: {
-                uri,
-                price: depositAmount.toString()
+                uri: uri.toString(),
+                price: depositAmount
             },
         });
         toast.success("NFT minted successfully", {
